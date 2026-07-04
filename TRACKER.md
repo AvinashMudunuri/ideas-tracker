@@ -33,7 +33,7 @@ Done and deployed/shipped.
 ## 🗃️ Backlog
 Synthesized ideas that aren't prioritized yet.
 
-*None yet*
+- [Singapore Trip Tracker](synthesis/singapore-trip-tracker.md) - System to track prerequisites, packing, expenses, and splits for family trip
 
 ---
 
