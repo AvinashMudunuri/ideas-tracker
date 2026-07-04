@@ -114,31 +114,33 @@ Making purchase decisions requires checking multiple websites, aggregating data 
 
 ---
 
+## Validation Framework
+
+Quick checks before committing time:
+
+**1. Quick reality check (15 min):**
+- Use PriceBaba/MySmartPrice for one product you're interested in
+- Does it solve the problem or leave you frustrated?
+- What's missing?
+
+**2. Talk to 3 people (30 min):**
+- "How did you research your last big purchase?"
+- If they don't mention this as a pain point, demand might be weak
+
+**3. Legal sanity check (30 min):**
+- Check one platform's ToS for scraping
+- Search "Amazon API India" - is there an easy path?
+- If both are blocked, pivot to manual/crowdsourced data
+
+**4. Build or use? (15 min decision):**
+- If existing tools are 80% good → just use them
+- If there's a clear gap → synthesize and build
+
+**Total: ~90 minutes to go/no-go**
+
 ## Next Steps
 
-If picking this up tomorrow:
-
-1. **Validate demand:**
-   - Is this solving a real pain point? (probably yes, but confirm)
-   - Check existing tools (Google Shopping, PriceHistory, CamelCamelCamel)
-   - What's missing from current solutions?
-
-2. **Legal research:**
-   - Review ToS for major e-commerce platforms
-   - Check if APIs are available (Amazon Product Advertising API, etc.)
-   - Understand affiliate program requirements
-
-3. **MVP scope:**
-   - Pick ONE category (suggest: mobiles - clear specs, high demand)
-   - Pick 2-3 platforms (Amazon, Flipkart, Croma)
-   - One city (Hyderabad)
-   - Basic comparison table
-
-4. **Tech spike:**
-   - Test scraping feasibility for chosen platforms
-   - Prototype data normalization logic
-   - Build simple comparison UI
-
-5. **Competitors analysis:**
-   - What do PriceBaba, MySmartPrice, CompareRaja do well/poorly?
-   - Can we differentiate with better UX or deeper analysis?
+If picking this up:
+1. Run the validation framework above
+2. If still interested after validation → synthesize with MVP scope
+3. If not → archive and move on

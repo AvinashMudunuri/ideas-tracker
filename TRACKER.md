@@ -37,13 +37,6 @@ Synthesized ideas that aren't prioritized yet.
 
 ---
 
-## 🔬 Research Needed
-Ideas that need validation, technical spikes, or competitive analysis before synthesis.
-
-- [Market Comparative Research Tool](ideas/2026-07-04-market-comparative-research-tool.md) + [Research Plan](ideas/2026-07-04-market-research-tool-research-plan.md) - Needs legal/technical feasibility validation, competitive analysis, and demand validation
-
----
-
 ## 💡 Raw Ideas
 Not yet synthesized. See `ideas/` folder for brain dumps.
 
