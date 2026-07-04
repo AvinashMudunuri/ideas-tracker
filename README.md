@@ -64,6 +64,16 @@ cat TRACKER.md
 ideas/              # Raw brain dumps (dated)
 synthesis/          # Refined, connected concepts
 templates/          # Templates for consistency
-scripts/            # Helper scripts
+.cursor/skills/     # Cursor AI skill for automation
 TRACKER.md          # Central tracking board
 ```
+
+## How It Works
+
+The Cursor AI agent uses the **Ideas Tracker Skill** to automate the workflow. Just talk to the AI naturally:
+- It captures ideas with proper structure
+- Links related concepts during synthesis
+- Keeps tracker status current
+- Retrieves context when you need it
+
+See `.cursor/skills/ideas-tracker/SKILL.md` for technical details.
