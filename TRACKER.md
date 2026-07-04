@@ -40,7 +40,7 @@ Synthesized ideas that aren't prioritized yet.
 ## 💡 Raw Ideas
 Not yet synthesized. See `ideas/` folder for brain dumps.
 
-- See `ideas/` directory for raw thoughts
+- [Singapore Trip Planning System](ideas/2026-07-04-singapore-trip-planning-system.md) - Track prerequisites, mandatory items, expenses, and splits for family trip
 
 ---
 
