@@ -37,10 +37,16 @@ Synthesized ideas that aren't prioritized yet.
 
 ---
 
+## 🔬 Research Needed
+Ideas that need validation, technical spikes, or competitive analysis before synthesis.
+
+- [Market Comparative Research Tool](ideas/2026-07-04-market-comparative-research-tool.md) + [Research Plan](ideas/2026-07-04-market-research-tool-research-plan.md) - Needs legal/technical feasibility validation, competitive analysis, and demand validation
+
+---
+
 ## 💡 Raw Ideas
 Not yet synthesized. See `ideas/` folder for brain dumps.
 
-- [Market Comparative Research Tool](ideas/2026-07-04-market-comparative-research-tool.md) - System to compare products/services across platforms with location-specific filtering
 - [Personal Knowledge Graph](ideas/2026-07-04-example-idea.md) - Visual knowledge graph connecting ideas, notes, and projects
 
 ---
@@ -49,5 +55,6 @@ Not yet synthesized. See `ideas/` folder for brain dumps.
 
 <!-- Log significant tracker changes here -->
 
+- 2026-07-04: Market Research Tool moved to Research Needed with research plan
 - 2026-07-04: Singapore Trip Tracker synthesized and added to Backlog
 - 2026-07-04: Tracker initialized

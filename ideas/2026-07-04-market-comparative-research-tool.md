@@ -1,7 +1,8 @@
 # Market Comparative Research Analysis Tool
 
 **Date:** 2026-07-04  
-**Status:** Raw Brain Dump
+**Status:** Needs Research  
+**Research Priority:** Legal/Technical feasibility before synthesis
 
 ---
 
