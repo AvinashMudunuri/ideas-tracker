@@ -40,7 +40,8 @@ Synthesized ideas that aren't prioritized yet.
 ## 💡 Raw Ideas
 Not yet synthesized. See `ideas/` folder for brain dumps.
 
-- [Singapore Trip Planning System](ideas/2026-07-04-singapore-trip-planning-system.md) - Track prerequisites, mandatory items, expenses, and splits for family trip
+- [Market Comparative Research Tool](ideas/2026-07-04-market-comparative-research-tool.md) - System to compare products/services across platforms with location-specific filtering
+- [Personal Knowledge Graph](ideas/2026-07-04-example-idea.md) - Visual knowledge graph connecting ideas, notes, and projects
 
 ---
 
@@ -48,4 +49,5 @@ Not yet synthesized. See `ideas/` folder for brain dumps.
 
 <!-- Log significant tracker changes here -->
 
+- 2026-07-04: Singapore Trip Tracker synthesized and added to Backlog
 - 2026-07-04: Tracker initialized
