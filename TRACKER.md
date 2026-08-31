@@ -26,7 +26,7 @@ Waiting on something (decision, resource, dependency).
 ## ✅ Completed
 Done and deployed/shipped.
 
-*None yet*
+- [Waypoint](synthesis/waypoint-app.md) → [github.com/AvinashMudunuri/waypoint](https://github.com/AvinashMudunuri/waypoint) — Phase-based language learning (Korean live, multi-language roadmap)
 
 ---
 
@@ -48,6 +48,7 @@ Not yet synthesized. See `ideas/` folder for brain dumps.
 
 <!-- Log significant tracker changes here -->
 
+- 2026-08-31: Language Path shipped to dedicated repo; ideas-tracker keeps idea + synthesis only
 - 2026-07-04: Market Research Tool moved to Research Needed with research plan
 - 2026-07-04: Singapore Trip Tracker synthesized and added to Backlog
 - 2026-07-04: Tracker initialized
