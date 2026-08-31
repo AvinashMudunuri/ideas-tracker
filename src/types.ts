@@ -51,6 +51,13 @@ export interface AppProgress {
   dramaPhrases: DramaPhrase[]
   routineChecks: Record<string, boolean>
   startDate: string
+  hangulStats: HangulStats
 }
 
-export type Tab = 'home' | 'phases' | 'routine' | 'drama' | 'milestones'
+export interface HangulStats {
+  correct: number
+  total: number
+  streak: number
+}
+
+export type Tab = 'home' | 'phases' | 'hangul' | 'routine' | 'drama' | 'milestones'

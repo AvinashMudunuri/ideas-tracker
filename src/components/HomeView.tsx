@@ -8,6 +8,7 @@ interface HomeViewProps {
   daysSinceStart: number
   phraseCount: number
   routineDone: number
+  hangulAccuracy: number
   onNavigate: (tab: Tab) => void
 }
 
@@ -18,6 +19,7 @@ export function HomeView({
   daysSinceStart,
   phraseCount,
   routineDone,
+  hangulAccuracy,
   onNavigate,
 }: HomeViewProps) {
   return (
@@ -39,7 +41,28 @@ export function HomeView({
       <section className="grid grid-cols-2 gap-3">
         <StatCard label="Phrases mined" value={phraseCount} onClick={() => onNavigate('drama')} />
         <StatCard label="Routine this week" value={`${routineDone}/7`} onClick={() => onNavigate('routine')} />
+        <StatCard
+          label="Hangul accuracy"
+          value={hangulAccuracy > 0 ? `${hangulAccuracy}%` : '—'}
+          onClick={() => onNavigate('hangul')}
+        />
+        <StatCard label="Phase progress" value={`${phasePercent}%`} onClick={() => onNavigate('phases')} />
       </section>
+
+      {currentPhase.number === 1 && (
+        <section className="bg-white rounded-2xl p-5 border border-coral/20 space-y-3">
+          <h3 className="font-display font-semibold text-lg">Start here: Hangul quiz</h3>
+          <p className="text-sm text-ink-muted">
+            Phase 1 is all about the alphabet. Study the chart, then quiz yourself until you hit 80%+.
+          </p>
+          <button
+            onClick={() => onNavigate('hangul')}
+            className="w-full py-3 bg-coral text-white rounded-xl font-semibold text-sm hover:bg-coral/90 transition-colors"
+          >
+            Practice Hangul →
+          </button>
+        </section>
+      )}
 
       <section className="bg-white rounded-2xl p-5 border border-cream-dark space-y-3">
         <h3 className="font-display font-semibold text-lg">Today's focus</h3>
