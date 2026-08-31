@@ -1,6 +1,6 @@
-# Language Path
+# Waypoint
 
-A phase-based language learning coach — finite phases with clear exit criteria, not endless app grinding.
+Honest milestones on your language journey — finite phases with clear exit criteria, not endless app grinding.
 
 **Korean is live.** Japanese, German, and more are planned.
 

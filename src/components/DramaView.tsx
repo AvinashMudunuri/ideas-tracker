@@ -116,7 +116,7 @@ export function DramaView({ phrases, onAdd, onRemove }: DramaViewProps) {
           </div>
           {exportMsg && <p className="text-xs text-sage font-semibold text-center">{exportMsg}</p>}
           <p className="text-[10px] text-ink-muted">
-            Anki: File → Import → select the downloaded .txt file. Deck name: "Korean Path Drama Phrases"
+            Anki: File → Import → select the downloaded .txt file. Deck name: "Waypoint Korean Phrases"
           </p>
         </div>
       )}

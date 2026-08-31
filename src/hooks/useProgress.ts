@@ -2,7 +2,8 @@ import { useCallback, useEffect, useState } from 'react'
 import type { AppProgress, DramaPhrase } from '../types'
 import { phases } from '../data/curriculum'
 
-const STORAGE_KEY = 'korean-path-progress'
+const STORAGE_KEY = 'waypoint-progress'
+const LEGACY_STORAGE_KEY = 'korean-path-progress'
 
 const defaultProgress = (): AppProgress => ({
   completedTasks: {},
@@ -15,7 +16,11 @@ const defaultProgress = (): AppProgress => ({
 
 function loadProgress(): AppProgress {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY)
+    let raw = localStorage.getItem(STORAGE_KEY)
+    if (!raw) {
+      raw = localStorage.getItem(LEGACY_STORAGE_KEY)
+      if (raw) localStorage.setItem(STORAGE_KEY, raw)
+    }
     if (raw) {
       const parsed = JSON.parse(raw)
       return { ...defaultProgress(), ...parsed, hangulStats: { ...defaultProgress().hangulStats, ...parsed.hangulStats } }

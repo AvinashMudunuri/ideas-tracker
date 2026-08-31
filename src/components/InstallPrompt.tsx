@@ -8,7 +8,8 @@ interface BeforeInstallPromptEvent extends Event {
 export function InstallPrompt() {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
   const [dismissed, setDismissed] = useState(() => {
-    return localStorage.getItem('korean-path-install-dismissed') === 'true'
+    return localStorage.getItem('waypoint-install-dismissed') === 'true'
+      || localStorage.getItem('korean-path-install-dismissed') === 'true'
   })
   const [isInstalled, setIsInstalled] = useState(false)
 
@@ -41,14 +42,14 @@ export function InstallPrompt() {
 
   const handleDismiss = () => {
     setDismissed(true)
-    localStorage.setItem('korean-path-install-dismissed', 'true')
+    localStorage.setItem('waypoint-install-dismissed', 'true')
   }
 
   return (
     <div className="bg-ink text-white rounded-2xl p-4 flex items-center gap-3 mb-4">
       <span className="text-2xl shrink-0">📲</span>
       <div className="flex-1 min-w-0">
-        <p className="text-sm font-semibold">Install Korean Path</p>
+        <p className="text-sm font-semibold">Install Waypoint</p>
         <p className="text-xs text-white/70">Add to your home screen for quick access</p>
       </div>
       <button

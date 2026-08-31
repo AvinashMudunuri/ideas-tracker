@@ -22,9 +22,9 @@ export function Layout({ children, activeTab, onTabChange }: LayoutProps) {
         <div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
           <div>
             <h1 className="font-display text-xl font-bold text-ink tracking-tight">
-              Korean Path
+              Waypoint
             </h1>
-            <p className="text-xs text-ink-muted">Phases, not endless levels</p>
+            <p className="text-xs text-ink-muted">Korean · Honest milestones</p>
           </div>
           <span className="text-2xl" aria-hidden>한</span>
         </div>

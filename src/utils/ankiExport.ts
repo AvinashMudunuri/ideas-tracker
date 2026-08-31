@@ -25,7 +25,7 @@ export function exportPhrasesToAnki(phrases: DramaPhrase[]) {
   const lines = [
     '#separator:tab',
     '#html:true',
-    '#deck:Korean Path Drama Phrases',
+    '#deck:Waypoint Korean Phrases',
     '#notetype:Basic',
     '#columns:Front Back Tags',
     '',
@@ -39,7 +39,7 @@ export function exportPhrasesToAnki(phrases: DramaPhrase[]) {
   ]
 
   const date = new Date().toISOString().slice(0, 10)
-  downloadFile(lines.join('\n'), `korean-path-phrases-${date}.txt`, 'text/plain;charset=utf-8')
+  downloadFile(lines.join('\n'), `waypoint-korean-phrases-${date}.txt`, 'text/plain;charset=utf-8')
 }
 
 /** Simple CSV for spreadsheets or other flashcard apps */
@@ -55,5 +55,5 @@ export function exportPhrasesToCsv(phrases: DramaPhrase[]) {
   ]
 
   const date = new Date().toISOString().slice(0, 10)
-  downloadFile(lines.join('\n'), `korean-path-phrases-${date}.csv`, 'text/csv;charset=utf-8')
+  downloadFile(lines.join('\n'), `waypoint-korean-phrases-${date}.csv`, 'text/csv;charset=utf-8')
 }

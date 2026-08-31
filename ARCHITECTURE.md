@@ -1,6 +1,6 @@
 # Multi-language architecture (planned)
 
-Language Path uses a **language module** pattern. Each language is a self-contained config:
+Waypoint uses a **language module** pattern. Each language is a self-contained config:
 
 ```
 src/
@@ -34,6 +34,6 @@ src/
 1. Create `src/languages/<code>/` with curriculum + script data
 2. Register in `src/languages/index.ts`
 3. Add language picker to onboarding / settings
-4. Scope localStorage keys per language: `language-path:<code>:progress`
+4. Scope localStorage keys per language: `waypoint:<code>:progress`
 
 Korean ships first. Architecture refactors as language #2 is added — no premature abstraction.

@@ -11,9 +11,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'apple-touch-icon.svg'],
       manifest: {
-        name: 'Korean Path',
-        short_name: 'Korean Path',
-        description: 'Learn Korean through finite phases — not endless app grinding.',
+        name: 'Waypoint',
+        short_name: 'Waypoint',
+        description: 'Honest milestones on your language journey — phased learning, not endless grinding.',
         theme_color: '#1a1a2e',
         background_color: '#faf7f2',
         display: 'standalone',
