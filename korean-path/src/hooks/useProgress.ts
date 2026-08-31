@@ -10,12 +10,16 @@ const defaultProgress = (): AppProgress => ({
   dramaPhrases: [],
   routineChecks: {},
   startDate: new Date().toISOString(),
+  hangulStats: { correct: 0, total: 0, streak: 0 },
 })
 
 function loadProgress(): AppProgress {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    if (raw) return { ...defaultProgress(), ...JSON.parse(raw) }
+    if (raw) {
+      const parsed = JSON.parse(raw)
+      return { ...defaultProgress(), ...parsed, hangulStats: { ...defaultProgress().hangulStats, ...parsed.hangulStats } }
+    }
   } catch {
     /* ignore corrupt data */
   }
@@ -88,6 +92,20 @@ export function useProgress() {
     setProgress(defaultProgress())
   }, [])
 
+  const recordHangulAnswer = useCallback((correct: boolean) => {
+    setProgress((prev) => {
+      const streak = correct ? prev.hangulStats.streak + 1 : 0
+      return {
+        ...prev,
+        hangulStats: {
+          correct: prev.hangulStats.correct + (correct ? 1 : 0),
+          total: prev.hangulStats.total + 1,
+          streak,
+        },
+      }
+    })
+  }, [])
+
   const phaseProgress = (phaseId: string) => {
     const phase = phases.find((p) => p.id === phaseId)
     if (!phase) return 0
@@ -121,5 +139,6 @@ export function useProgress() {
     totalTasks,
     daysSinceStart,
     routineDoneThisWeek,
+    recordHangulAnswer,
   }
 }

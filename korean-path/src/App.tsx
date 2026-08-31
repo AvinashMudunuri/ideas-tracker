@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import { phases } from './data/curriculum'
-import { milestones } from './data/curriculum'
+import { phases, milestones } from './data/curriculum'
 import { useProgress } from './hooks/useProgress'
 import { Layout } from './components/Layout'
+import { InstallPrompt } from './components/InstallPrompt'
 import { HomeView } from './components/HomeView'
 import { PhasesView } from './components/PhasesView'
+import { HangulView } from './components/HangulView'
 import { RoutineView } from './components/RoutineView'
 import { DramaView } from './components/DramaView'
 import { MilestonesView } from './components/MilestonesView'
@@ -24,6 +25,7 @@ export default function App() {
     overallProgress,
     daysSinceStart,
     routineDoneThisWeek,
+    recordHangulAnswer,
   } = useProgress()
 
   const renderView = () => {
@@ -37,6 +39,11 @@ export default function App() {
             daysSinceStart={daysSinceStart}
             phraseCount={progress.dramaPhrases.length}
             routineDone={routineDoneThisWeek}
+            hangulAccuracy={
+              progress.hangulStats.total > 0
+                ? Math.round((progress.hangulStats.correct / progress.hangulStats.total) * 100)
+                : 0
+            }
             onNavigate={setTab}
           />
         )
@@ -48,6 +55,13 @@ export default function App() {
             completedTasks={progress.completedTasks}
             phaseProgress={phaseProgress}
             onToggleTask={toggleTask}
+          />
+        )
+      case 'hangul':
+        return (
+          <HangulView
+            stats={progress.hangulStats}
+            onAnswer={recordHangulAnswer}
           />
         )
       case 'routine':
@@ -79,6 +93,7 @@ export default function App() {
 
   return (
     <Layout activeTab={tab} onTabChange={(t) => setTab(t as Tab)}>
+      <InstallPrompt />
       {renderView()}
     </Layout>
   )

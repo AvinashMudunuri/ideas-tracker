@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { DramaPhrase } from '../types'
+import { exportPhrasesToAnki, exportPhrasesToCsv } from '../utils/ankiExport'
 
 interface DramaViewProps {
   phrases: DramaPhrase[]
@@ -13,6 +14,7 @@ export function DramaView({ phrases, onAdd, onRemove }: DramaViewProps) {
   const [show, setShow] = useState('')
   const [notes, setNotes] = useState('')
   const [expanded, setExpanded] = useState(false)
+  const [exportMsg, setExportMsg] = useState('')
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -25,12 +27,19 @@ export function DramaView({ phrases, onAdd, onRemove }: DramaViewProps) {
     setExpanded(false)
   }
 
+  const handleExport = (format: 'anki' | 'csv') => {
+    if (format === 'anki') exportPhrasesToAnki(phrases)
+    else exportPhrasesToCsv(phrases)
+    setExportMsg(`Exported ${phrases.length} phrase${phrases.length !== 1 ? 's' : ''} as ${format === 'anki' ? 'Anki' : 'CSV'}`)
+    setTimeout(() => setExportMsg(''), 3000)
+  }
+
   return (
     <div className="space-y-6">
       <div>
         <h2 className="font-display text-2xl font-bold">Drama Phrase Miner</h2>
         <p className="text-sm text-ink-muted mt-1">
-          Pause while watching, capture the phrase, review later. Your entertainment becomes study.
+          Pause while watching, capture the phrase, review later. Export to Anki when ready.
         </p>
       </div>
 
@@ -87,6 +96,30 @@ export function DramaView({ phrases, onAdd, onRemove }: DramaViewProps) {
           </button>
         </div>
       </form>
+
+      {phrases.length > 0 && (
+        <div className="bg-white rounded-2xl border border-cream-dark p-4 space-y-3">
+          <p className="text-xs font-semibold text-ink-muted uppercase tracking-wider">Export to flashcards</p>
+          <div className="flex gap-2">
+            <button
+              onClick={() => handleExport('anki')}
+              className="flex-1 py-2.5 bg-ink text-white rounded-xl text-sm font-semibold hover:bg-ink/90 transition-colors"
+            >
+              Export for Anki
+            </button>
+            <button
+              onClick={() => handleExport('csv')}
+              className="flex-1 py-2.5 border border-cream-dark rounded-xl text-sm font-semibold hover:bg-cream transition-colors"
+            >
+              Export CSV
+            </button>
+          </div>
+          {exportMsg && <p className="text-xs text-sage font-semibold text-center">{exportMsg}</p>}
+          <p className="text-[10px] text-ink-muted">
+            Anki: File → Import → select the downloaded .txt file. Deck name: "Korean Path Drama Phrases"
+          </p>
+        </div>
+      )}
 
       {phrases.length === 0 ? (
         <div className="text-center py-12 text-ink-muted">

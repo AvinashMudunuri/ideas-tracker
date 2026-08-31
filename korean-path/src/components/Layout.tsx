@@ -9,6 +9,7 @@ interface LayoutProps {
 const tabs = [
   { id: 'home', label: 'Home', icon: '⌂' },
   { id: 'phases', label: 'Phases', icon: '◈' },
+  { id: 'hangul', label: 'Hangul', icon: '가' },
   { id: 'routine', label: 'Routine', icon: '☰' },
   { id: 'drama', label: 'Drama', icon: '▶' },
   { id: 'milestones', label: 'Goals', icon: '◎' },
@@ -33,19 +34,19 @@ export function Layout({ children, activeTab, onTabChange }: LayoutProps) {
         {children}
       </main>
 
-      <nav className="fixed bottom-0 inset-x-0 bg-white/90 backdrop-blur-md border-t border-cream-dark safe-area-pb">
-        <div className="max-w-3xl mx-auto flex">
+      <nav className="fixed bottom-0 inset-x-0 bg-white/90 backdrop-blur-md border-t border-cream-dark">
+        <div className="max-w-3xl mx-auto flex overflow-x-auto scrollbar-hide">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => onTabChange(tab.id)}
-              className={`flex-1 flex flex-col items-center gap-0.5 py-3 text-xs transition-colors ${
+              className={`flex-1 min-w-[56px] flex flex-col items-center gap-0.5 py-2.5 text-[10px] transition-colors ${
                 activeTab === tab.id
                   ? 'text-coral font-semibold'
                   : 'text-ink-muted hover:text-ink'
               }`}
             >
-              <span className="text-lg leading-none">{tab.icon}</span>
+              <span className="text-base leading-none">{tab.icon}</span>
               {tab.label}
             </button>
           ))}

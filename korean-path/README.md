@@ -27,9 +27,26 @@ Open http://localhost:5173
 | **Phases** | 4-phase curriculum with checkable tasks + resource links |
 | **Routine** | Weekly study/speaking/drama schedule tracker |
 | **Drama** | Capture Korean phrases from shows you watch |
+| **Hangul** | Interactive alphabet chart + quiz (char↔sound) |
 | **Goals** | Realistic milestone timeline |
 
 Progress is saved in your browser (localStorage). No account needed.
+
+### PWA — Install on your phone
+
+The app is a Progressive Web App. On mobile:
+- **Android (Chrome):** Tap "Install" when prompted, or Menu → "Add to Home screen"
+- **iPhone (Safari):** Share → "Add to Home Screen"
+
+Works offline after first load.
+
+### Anki export
+
+In the Drama tab, tap **Export for Anki** to download a `.txt` file. In Anki:
+1. File → Import
+2. Select the downloaded file
+3. Deck: "Korean Path Drama Phrases"
+4. Fields map automatically (Front = Korean, Back = English, Tags = show name)
 
 ## Tech Stack
 
