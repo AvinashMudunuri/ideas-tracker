@@ -12,3 +12,7 @@ Thumbs.db
 # Temporary files
 *.tmp
 .scratch/
+
+# Node
+node_modules/
+dist/

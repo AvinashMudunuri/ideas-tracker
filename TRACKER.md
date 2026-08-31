@@ -12,7 +12,7 @@ Ideas that are synthesized, scoped, and ready to execute.
 ## 🚧 In Progress
 Currently being worked on.
 
-*None yet*
+- [Korean Path App](synthesis/korean-path-app.md) - Phase-based Korean learning web app (anti-Duolingo)
 
 ---
 
