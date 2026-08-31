@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
-# Bootstrap the Language Path app into its own repository.
+# Bootstrap the Waypoint app into its own repository.
 #
 # Prerequisites:
 #   1. Create an empty repo on GitHub: https://github.com/new
-#      Name: language-path
+#      Name: waypoint
 #      Do NOT initialize with README
 #
 #   2. Run this script from the ideas-tracker repo root:
-#      ./scripts/setup-language-path-repo.sh
+#      ./scripts/setup-waypoint-repo.sh
 #
-#   3. Optional: pass a target directory (default: ../language-path)
+#   3. Optional: pass a target directory (default: ../waypoint)
 
 set -euo pipefail
 
-TARGET_DIR="${1:-$(cd "$(dirname "$0")/.." && pwd)/../language-path}"
-REPO_URL="https://github.com/AvinashMudunuri/language-path.git"
+TARGET_DIR="${1:-$(cd "$(dirname "$0")/.." && pwd)/../waypoint}"
+REPO_URL="https://github.com/AvinashMudunuri/waypoint.git"
 EXPORT_BRANCH="language-path-export"
 
 echo "→ Cloning export branch into ${TARGET_DIR}"

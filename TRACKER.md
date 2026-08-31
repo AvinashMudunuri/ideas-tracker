@@ -26,7 +26,7 @@ Waiting on something (decision, resource, dependency).
 ## ✅ Completed
 Done and deployed/shipped.
 
-- [Language Path](synthesis/korean-path-app.md) → [github.com/AvinashMudunuri/language-path](https://github.com/AvinashMudunuri/language-path) — Phase-based language learning app (Korean live, multi-language roadmap)
+- [Waypoint](synthesis/waypoint-app.md) → [github.com/AvinashMudunuri/waypoint](https://github.com/AvinashMudunuri/waypoint) — Phase-based language learning (Korean live, multi-language roadmap)
 
 ---
 
